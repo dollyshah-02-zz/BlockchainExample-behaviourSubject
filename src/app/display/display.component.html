@@ -1,0 +1,14 @@
+<table *ngIf="coins!= 0">
+  <thead>
+  <tr>
+      <td>Coin Name</td>{{"name"+name}}
+      <td>Coin Price</td>
+  </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let coin of coins | async ;let i=index">
+          <td>{{ coin.name }}</td>
+          <td>{{ coin.price }}</td>
+          <td><button type="button" (click)="deleteCoin(i)">Delete</button></td>
+      </tr>
+  </tbody>

@@ -1,0 +1,13 @@
+<form>
+  <div>
+    <label>Coin Name</label>
+    <input type="text" #name />
+  </div>
+  <div>
+    <label>Coin Price</label>
+    <input type="text" #price />
+  </div>
+  <div>
+    <button type="button" (click)="addCoin(name.value,price.value)">Add</button>
+  </div>
+</form>
